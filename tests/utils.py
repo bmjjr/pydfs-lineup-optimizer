@@ -12,7 +12,7 @@ class PlayersLoader:
     def __call__(self):
         if self.cache:
             return self.cache[:]
-        with open('C:\\Users\\bob.NVIDA-PC\\repos\\pydfs-lineup-optimizer\\tests/players.json', 'r') as file:
+        with open('tests/players.json', 'r') as file:
             players_dict = json.loads(file.read())['players']
         players = [Player(
             p['id'],
